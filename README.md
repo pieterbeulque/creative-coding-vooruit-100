@@ -9,6 +9,10 @@ I decided to try out [Sketch.js](http://soulwire.github.io/sketch.js/) library. 
 # What I built
 My goal was to make each number morph into the next number in some kind of organic way. I don't think I succeeded 100%, but it's not a big fail either.
 
+[Take a look at it here.](http://pieterbeulque.github.io/creative-coding-vooruit-100/)
+
+![Screenshot](http://pieterbeulque.github.io/creative-coding-vooruit-100/assets/cc.png "Screenshot")
+
 I started by defining 20 points on every number character of the Sullivan font. That way I could render every character with simple `moveTo` and `lineTo` calls.
 
 For the transitions I calculated the vector between a point on the current character and the same point on the next character (simplified `current[n].x` to `current[n+1].x`). Using this vector and a step counter (increased on every frame), it's very simple to calculate the current point in the transition. Using the step variable in the transition calculation also allows for organic motion and easing functions.
